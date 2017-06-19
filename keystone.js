@@ -75,10 +75,10 @@ keystone.set('email locals', {
 
 keystone.set('email rules', [{
 	find: '/images/',
-	replace: (keystone.get('env') == 'production') ? 'http://www.your-server.com/images/' : 'http://localhost:3000/images/'
+	replace: (keystone.get('env') == 'production') ? 'http://atw-blog.herokuapp.com/images/' : 'http://localhost:3000/images/'
 }, {
 	find: '/keystone/',
-	replace: (keystone.get('env') == 'production') ? 'http://www.your-server.com/keystone/' : 'http://localhost:3000/keystone/'
+	replace: (keystone.get('env') == 'production') ? 'http://atw-blog.herokuapp.com/keystone/' : 'http://localhost:3000/keystone/'
 }]);
 
 // Load your project's email test routes
@@ -93,6 +93,11 @@ keystone.set('nav', {
 	'users': 'users'
 });
 
+//keystone.set("port", "1000");
+//keystone.set("host", "localhost")
+
 // Start Keystone to connect to your database and initialise the web server
 
 keystone.start();
+
+console.log("Hello there");
