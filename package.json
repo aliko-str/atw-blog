@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "keystone": "^0.3.14",
+		"mongoose": "^4.7.7",
+    "keystone": "~0.3.14",
     "async": "^1.4.2",
     "underscore": "^1.8.3",
-    "dotenv": "^1.1.0",
-		"mongoose": "^4.7.7"
+    "dotenv": "^1.1.0"
   },
   "devDependencies": {
     "grunt": "^0.4.4",
