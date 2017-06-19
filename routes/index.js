@@ -34,16 +34,8 @@ var routes = {
 // Setup Route Bindings
 exports = module.exports = function(app) {
 	console.log("hi from the app");
-	
-	app.get("/hi?", function(req, res){
-		console.log("hi there from the hi route ");
-		res.status(200).send("hey-hey").end();
-	});
 	// Views
-	app.get('/', function(req, res, next){
-		console.log("serving index");
-		return routes.views.index(req, res, next);
-	});
+	app.get('/', routes.views.index);
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
 	app.all('/contact', routes.views.contact);
