@@ -33,6 +33,9 @@ keystone.init({
 
 keystone.import('models');
 
+keystone.set("port", process.env.PORT || 5000);
+keystone.set("host", "0.0.0.0");
+
 // Setup common locals for your templates. The following are required for the
 // bundled templates and layouts. Any runtime locals (that should be set uniquely
 // for each request) should be added to ./routes/middleware.js
@@ -92,9 +95,6 @@ keystone.set('nav', {
 	'enquiries': 'enquiries',
 	'users': 'users'
 });
-
-keystone.set("port", process.env.PORT || 5000);
-//keystone.set("host", "localhost")
 
 // Start Keystone to connect to your database and initialise the web server
 
