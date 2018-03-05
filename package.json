@@ -21,10 +21,6 @@
     "grunt-nodemon": ">=0.2.1",
     "open": "0.0.5"
   },
-  "engines": {
-    "node": "~8.9.4",
-    "npm": "~5.6.0"
-  },
   "scripts": {
     "start": "node keystone.js"
   },
