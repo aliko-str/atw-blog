@@ -9,8 +9,17 @@ html
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 		meta(name="Description" CONTENT="Category: Blog, Topic:Gardening|Software|Classics")
-		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<script> (adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-2122081531291877", enable_page_level_ads: true});</script>
+		script(async src="https://www.googletagmanager.com/gtag/js?id=UA-115123065-1")
+		script.
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-115123065-1');
+
+
+		script(async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
+		script.
+			(adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-2122081531291877", enable_page_level_ads: true});
 
 		title= title || 'Software for Gardening | Tools for Classical Music | Furniture for Doctors'
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
@@ -87,9 +96,13 @@ html
 		//- FOOTER
 		.container: #footer
 
-			//- You don't _have_ to include a link saying your site is powered by KeystoneJS, but we appreciate it!
-			p Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.
+			p(style='text-align:center;') Note: This entire page is a currently-fruitless attempt to convince Google to show some ads on a low-volume page, mainly out of ad-research curiosity... No blue whales were harmed as the result of this curiosity (nor any other endengered species), but if you don't like the ads you might eventually see here, you should re-configure
+				a(href='https://adssettings.google.com/') your Google ad settings.
+			p(style='text-align:center;' id='nosenseCopyrPara') Copyright: Sci Times Review Not-Really-Incorporated
 
+		script.
+			var pEl = document.getElementById("nosenseCopyrPara");
+			pEl.innerText = pEl.innerText + ", 43 BCE - " + (new Date()).getFullYear() + " CE";
 
 		//- JAVASCRIPT
 
