@@ -93,7 +93,7 @@ keystone.set('nav', {
 	'users': 'users'
 });
 
-//keystone.set("port", "1000");
+keystone.set("port", process.env.PORT || 5000);
 //keystone.set("host", "localhost")
 
 // Start Keystone to connect to your database and initialise the web server
